@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امید کا دامن تھامے رکھیں</title>
+    <!-- گوگل فونٹس سے جمیل نوری نستعلیق اور امیری فونٹ کا لنک -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* بنیادی اور شاہی تھیم کی ترتیبات */
+        body {
+            background-color: #0a1128; /* گہرا شاہی نیلا پس منظر */
+            color: #f4f4f9;
+            font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+            line-height: 2.4;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            background-image: radial-gradient(circle, #101f42 10%, #0a1128 90%);
+        }
+
+        /* مین کنٹینر (شاہی فریم) */
+        .majestic-container {
+            max-width: 850px;
+            width: 100%;
+            background: rgba(13, 27, 42, 0.95);
+            padding: 50px;
+            border: 3px double #d4af37; /* سنہری ڈبل بارڈر */
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.1);
+            position: relative;
+        }
+
+        /* کونوں پر شاہی ڈیزائن کے اشارے */
+        .majestic-container::before, .majestic-container::after {
+            content: "✦";
+            position: absolute;
+            top: 10px;
+            color: #d4af37;
+            font-size: 20px;
+        }
+        .majestic-container::before { right: 15px; }
+        .majestic-container::after { left: 15px; }
+
+        /* مضمون کا مرکزی عنوان */
+        h1 {
+            text-align: center;
+            color: #d4af37; /* سنہری رنگ */
+            font-size: 2.6rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            border-bottom: 2px dashed #d4af37;
+            padding-bottom: 20px;
+        }
+
+        /* پیراگراف اسٹائل */
+        p {
+            font-size: 1.25rem;
+            text-align: justify;
+            margin-bottom: 25px;
+            word-spacing: 2px;
+        }
+
+        /* قرآنی آیات کا خاص باکس */
+        .quran-box {
+            background: linear-gradient(145deg, #0d253f, #07162c);
+            border-right: 5px solid #d4af37;
+            border-left: 5px solid #d4af37;
+            padding: 30px;
+            margin: 45px 0;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* عربی متن کا فونٹ */
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            color: #ffd700; /* چمکدار سونا */
+            line-height: 2.2;
+            margin-bottom: 20px;
+            display: block;
+            direction: rtl;
+        }
+
+        /* آیت کا ترجمہ اور حوالہ */
+        .translation {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            font-style: italic;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .reference {
+            font-size: 1rem;
+            color: #d4af37;
+            font-weight: bold;
+            display: block;
+        }
+
+        /* آخری ناصحانہ اور شعری انداز کی فہرست کا باکس */
+        .poetic-box {
+            border: 1px dashed rgba(212, 175, 55, 0.5);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 25px;
+            margin: 35px auto;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .poetic-line {
+            display: block;
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* اختتامیہ (الحمد للہ) */
+        .footer-shloka {
+            text-align: center;
+            font-family: 'Amiri', serif;
+            font-size: 1.6rem;
+            color: #d4af37;
+            margin-top: 40px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding-top: 20px;
+        }
+
+        /* مصنف/طالبِ دعا کا سگنیچر اسٹائل */
+        .author-signature {
+            text-align: left;
+            margin-top: 30px;
+            padding-left: 20px;
+            font-size: 1.2rem;
+            color: #d4af37;
+            font-style: italic;
+        }
+
+        /* موبائل اسکرینز کے لیے رسپانسو ڈیزائن */
+        @media (max-width: 600px) {
+            .majestic-container { padding: 25px; }
+            h1 { font-size: 1.8rem; }
+            p { font-size: 1.1rem; }
+            .arabic-text { font-size: 1.4rem; }
+            .poetic-line { font-size: 1.1rem; }
+            .author-signature { text-align: center; padding-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="majestic-container">
+        <h1>امید کا دامن تھامے رکھیں</h1>
+
+        <p>بعض اوقات زندگی کی دوڑ دھوپ سہتے سہتے انسان پے درپے ناکامیوں اور مشکلات سے اس قدر نڈھال ہو جاتا ہے کہ سانس لینا بھی بوجھ محسوس ہونے لگتا ہے۔ ناکامیوں سے جنم لینے والی بے بسی اور مایوسی ایسا اندھیرا پھیلا دیتی ہے کہ کہیں بھی امید کی کوئی کرن دکھائی نہیں دیتی۔</p>
+
+        <p>تاہم یہ حقیقت پیش نظر رہنی چاہیے کہ دنیاوی کامیابی ہو یا اخروی فلاح، امید وہ چراغ ہے جسے ہر حال میں روشن رکھنا ضروری ہے۔</p>
+
+        <p>انسان خطاکار ہے۔ جانے انجانے میں ایسے گناہ بھی سرزد ہو جاتے ہیں جن کا احساس دل پر بوجھ بن جاتا ہے۔ کبھی یہی احساسِ جرم انسان کو مایوسی کے ایسے اندھیرے میں دھکیل دیتا ہے کہ وہ اللہ کی رحمت سے بھی نااُمید ہونے لگتا ہے۔ حالانکہ ایک مسلمان کے لیے مایوسی کی کوئی گنجائش نہیں؛ کیونکہ اس کا رب گناہوں سے کہیں بڑھ کر غفور و رحیم ہے۔</p>
+
+        <p>اللہ تعالیٰ اپنے محبوب نبی ﷺ کے ذریعے اپنے گناہ گار بندوں کو امید دلاتے ہوئے فرماتا ہے:</p>
+
+        <!-- قرآنی آیت 1 -->
+        <div class="quran-box">
+            <span class="arabic-text">قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ ۚ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا ۚ إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ</span>
+            <span class="translation">"اے میرے وہ بندو جنہوں نے اپنی جانوں پر زیادتی کی ہے! اللہ کی رحمت سے نااُمید نہ ہو۔ بے شک اللہ تمام گناہ بخش دیتا ہے۔ یقیناً وہی بہت بخشنے والا، نہایت مہربان ہے۔"</span>
+            <span class="reference">(سورۃ الزمر: 53)</span>
+        </div>
+
+        <p>یہ آیت مایوسی کے اندھیروں میں امید کا ایسا چراغ ہے جس کی روشنی قیامت تک قائم رہے گی۔ گناہ چاہے کتنے ہی زیادہ کیوں نہ ہوں, جب تک انسان کی سانسیں باقی ہیں، توبہ کا دروازہ کھلا ہے۔</p>
+
+        <p>ایک مسلمان آج بھی اپنی زندگی کا رخ بدل سکتا ہے۔ وہ سچی توبہ کرکے گناہوں سے دامن چھڑا سکتا ہے، نیک اعمال اختیار کر سکتا ہے اور اپنے رب کے قریب ہو سکتا ہے۔ ماضی چاہے کتنا ہی تاریک کیوں نہ ہو، اللہ تعالیٰ چاہے تو آنے والا کل نور سے بھر سکتا ہے۔</p>
+
+        <p>حضرت نوح علیہ السلام نے بھی اپنی قوم کو اللہ کی طرف پلٹنے اور استغفار کرنے کی دعوت دیتے ہوئے فرمایا:</p>
+
+        <!-- قرآنی آیت 2 -->
+        <div class="quran-box">
+            <span class="arabic-text">فَقُلْتُ اسْتَغْفِرُوا رَبَّكُمْ إِنَّهُ كَانَ غَفَّارًا ۝ يُرْسِلِ السَّمَاءَ عَلَيْكُم مِّدْرَارًا ۝ وَيُمْدِدْكُم بِأَمْوَالٍ وَبَنِينَ وَيَجْعَل لَّكُمْ جَنَّاتٍ وَيَجْعَل لَّكُمْ أَنْهَارًا</span>
+            <span class="translation">"پس میں نے کہا: اپنے رب سے بخشش مانگو، بے شک وہ بہت بخشنے والا ہے۔ وہ تم پر آسمان سے خوب بارش برسائے گا، اور مال اور بیٹوں سے تمہاری مدد کرے گا، اور تمہارے لیے باغات بنائے گا اور تمہارے لیے نہریں جاری کرے گا۔"</span>
+            <span class="reference">(سورۃ نوح: 10-12)</span>
+        </div>
+
+        <p>دیکھیے! استغفار صرف گناہوں کی معافی کا ذریعہ نہیں، بلکہ اللہ تعالیٰ کی رحمت، برکت اور فضل کے دروازے کھولنے کا بھی سبب ہے۔</p>
+
+        <p>اور اگر زندگی کی مشکلات، معاشی تنگی، بیماری، تنہائی یا کسی آزمائش نے آپ کو تھکا دیا ہے تو یہ نہ سمجھیں کہ حالات ہمیشہ ایسے ہی رہیں گے۔ حالات بدلتے ہیں، رات کے بعد صبح ضرور طلوع ہوتی ہے، اور اللہ تعالیٰ کی رحمت سے کبھی نااُمید نہیں ہونا چاہیے۔</p>
+
+        <p>اللہ تعالیٰ فرماتا ہے:</p>
+
+        <!-- قرآنی آیت 3 -->
+        <div class="quran-box">
+            <span class="arabic-text">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا</span>
+            <span class="translation">"پس بے شک مشکل کے ساتھ آسانی ہے۔ بے شک مشکل کے ساتھ آسانی ہے۔"</span>
+            <span class="reference">(سورۃ الشرح: 5-6)</span>
+        </div>
+
+        <p>اس لیے اگر آج زندگی مشکل ہے تو صبر کیجیے، اگر گناہ ہو گئے ہیں تو توبہ کیجیے، اگر راستہ بند دکھائی دیتا ہے تو اللہ سے دعا کیجیے، اور اگر دل ٹوٹ گیا ہے تو اپنے رب سے تعلق مضبوط کیجیے۔</p>
+
+        <p>یاد رکھیے! اللہ تعالیٰ سے تعلق رکھنے والے انسان کے لیے کبھی بھی تمام راستے بند نہیں ہوتے۔</p>
+
+        <p>اپنے دل میں امید کا چراغ روشن رکھیے۔ قرآنِ کریم سے وابستہ رہیے، نماز کو تھامے رکھیے، استغفار کو اپنا معمول بنائیے اور اللہ تعالیٰ کے وعدوں پر کامل یقین رکھیے۔</p>
+
+        <p>کیونکہ مومن کی زندگی کا ایک خوبصورت راز یہی ہے کہ وہ حالات سے نہیں، اپنے رب سے امید رکھتا ہے۔</p>
+
+        <p>پس آج سے مایوسی کو اپنے دل میں جگہ نہ دیں۔</p>
+
+        <!-- خوبصورت ناصحانہ فریم -->
+        <div class="poetic-box">
+            <span class="poetic-line">گناہ گار ہیں تو توبہ کریں،</span>
+            <span class="poetic-line">کمزور ہیں تو اللہ سے مدد مانگیں،</span>
+            <span class="poetic-line">پریشان ہیں تو دعا کریں،</span>
+            <span class="poetic-line">اور تھک جائیں تو کچھ دیر اپنے رب کے سامنے جھک جائیں۔</span>
+        </div>
+
+        <p>شاید آپ کی زندگی کی سب سے خوبصورت صبح، اسی رات کے بعد طلوع ہونے والی ہو جسے آپ آج اپنی زندگی کی آخری رات سمجھ رہے ہیں۔</p>
+        
+        <p style="text-align: center; font-weight: bold; color: #ffd700;">اللہ کی رحمت سے کبھی مایوس نہ ہوں۔</p>
+
+        <!-- اختتامیہ الحمدللہ -->
+        <div class="footer-shloka">
+            وَآخِرُ دَعْوَاهُمْ أَنِ الْحَمْدُ لِلَّهِ رَبِّ ایلْعَالَمِينَ
+        </div>
+
+        <!-- طالبِ دعا / مصنف کا نام -->
