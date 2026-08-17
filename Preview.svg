@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="630"
+     viewBox="0 0 1200 630">
+
+    <defs>
+
+        <linearGradient id="sky"
+            x1="0" y1="0"
+            x2="0" y2="1">
+
+            <stop offset="0%"
+                stop-color="#050914"/>
+
+            <stop offset="55%"
+                stop-color="#172235"/>
+
+            <stop offset="100%"
+                stop-color="#d09a4a"/>
+
+        </linearGradient>
+
+        <radialGradient id="sun">
+
+            <stop offset="0%"
+                stop-color="#fffbd0"/>
+
+            <stop offset="45%"
+                stop-color="#ffd96a"/>
+
+            <stop offset="75%"
+                stop-color="#f2a51a"
+                stop-opacity=".85"/>
+
+            <stop offset="100%"
+                stop-color="#f2a51a"
+                stop-opacity="0"/>
+
+        </radialGradient>
+
+        <linearGradient id="ground"
+            x1="0" y1="0"
+            x2="0" y2="1">
+
+            <stop offset="0%"
+                stop-color="#172235"/>
+
+            <stop offset="100%"
+                stop-color="#070b12"/>
+
+        </linearGradient>
+
+    </defs>
+
+
+    <!-- آسمان -->
+
+    <rect width="1200"
+          height="630"
+          fill="url(#sky)"/>
+
+
+    <!-- سورج کی روشنی -->
+
+    <ellipse cx="600"
+             cy="475"
+             rx="360"
+             ry="190"
+             fill="url(#sun)"
+             opacity=".55"/>
+
+
+    <!-- سورج -->
+
+    <circle cx="600"
+            cy="500"
+            r="135"
+            fill="url(#sun)"/>
+
+
+    <!-- پہاڑ / اندھیرا -->
+
+    <path d="
+        M0 520
+        L150 430
+        L270 500
+        L410 370
+        L530 500
+        L690 350
+        L820 480
+        L970 390
+        L1200 500
+        L1200 630
+        L0 630 Z"
+        fill="url(#ground)"/>
+
+
+    <!-- سامنے کا اندھیرا -->
+
+    <path d="
+        M0 570
+        Q180 510 350 570
+        T700 570
+        T1200 570
+        L1200 630
+        L0 630 Z"
+        fill="#05080d"
+        opacity=".88"/>
+
+
+    <!-- عنوان -->
+
+    <text x="600"
+          y="145"
+          text-anchor="middle"
+          direction="rtl"
+          font-family="Noto Nastaliq Urdu, serif"
+          font-size="68"
+          font-weight="bold"
+          fill="#fff7df">
+
+        امید کا دامن تھامے
+
+    </text>
+
+
+    <!-- ذیلی عنوان -->
+
+    <text x="600"
+          y="215"
+          text-anchor="middle"
+          direction="rtl"
+          font-family="Noto Nastaliq Urdu, serif"
+          font-size="31"
+          fill="#f4dca5">
+
+        اندھیروں سے روشنی کی طرف ایک باوقار سفر
+
+    </text>
+
+
+    <!-- آیت -->
+
+    <text x="600"
+          y="315"
+          text-anchor="middle"
+          direction="rtl"
+          font-family="serif"
+          font-size="34"
+          fill="#fff">
+
+        لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ
+
+    </text>
+
+
+    <!-- حوالہ -->
+
+    <text x="600"
+          y="365"
+          text-anchor="middle"
+          direction="rtl"
+          font-family="Noto Nastaliq Urdu, serif"
+          font-size="24"
+          fill="#f7dfaa">
+
+        اللہ کی رحمت سے مایوس نہ ہو — سورۃ الزمر 39:53
+
+    </text>
+
+</svg>
